@@ -12,6 +12,9 @@
 		08BAA08B1F7A84A300FB4675 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08BAA0891F7A84A300FB4675 /* Main.storyboard */; };
 		08BAA08D1F7A84A300FB4675 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08BAA08C1F7A84A300FB4675 /* Assets.xcassets */; };
 		08BAA0901F7A84A300FB4675 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08BAA08E1F7A84A300FB4675 /* LaunchScreen.storyboard */; };
+		08BAA0991F7A859600FB4675 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BAA0981F7A859600FB4675 /* TableCell.swift */; };
+		08BAA09B1F7A89E800FB4675 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BAA09A1F7A89E800FB4675 /* ViewExtension.swift */; };
+		08BAA09D1F7A8AF900FB4675 /* NextTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BAA09C1F7A8AF900FB4675 /* NextTable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		08BAA08C1F7A84A300FB4675 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08BAA08F1F7A84A300FB4675 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08BAA0911F7A84A300FB4675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08BAA0981F7A859600FB4675 /* TableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		08BAA09A1F7A89E800FB4675 /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		08BAA09C1F7A8AF900FB4675 /* NextTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextTable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,25 @@
 		08BAA0841F7A84A300FB4675 /* TableInTable */ = {
 			isa = PBXGroup;
 			children = (
+				08BAA0971F7A858200FB4675 /* New Group */,
 				08BAA0851F7A84A300FB4675 /* AppDelegate.swift */,
 				08BAA0871F7A84A300FB4675 /* ViewController.swift */,
 				08BAA0891F7A84A300FB4675 /* Main.storyboard */,
 				08BAA08C1F7A84A300FB4675 /* Assets.xcassets */,
 				08BAA08E1F7A84A300FB4675 /* LaunchScreen.storyboard */,
 				08BAA0911F7A84A300FB4675 /* Info.plist */,
+				08BAA0981F7A859600FB4675 /* TableCell.swift */,
+				08BAA09A1F7A89E800FB4675 /* ViewExtension.swift */,
+				08BAA09C1F7A8AF900FB4675 /* NextTable.swift */,
 			);
 			path = TableInTable;
+			sourceTree = "<group>";
+		};
+		08BAA0971F7A858200FB4675 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,7 +113,7 @@
 				TargetAttributes = {
 					08BAA0811F7A84A300FB4675 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = MZN7NAJZ7T;
+						DevelopmentTeam = ECGY5X6YGW;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -137,7 +154,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08BAA0991F7A859600FB4675 /* TableCell.swift in Sources */,
 				08BAA0881F7A84A300FB4675 /* ViewController.swift in Sources */,
+				08BAA09D1F7A8AF900FB4675 /* NextTable.swift in Sources */,
+				08BAA09B1F7A89E800FB4675 /* ViewExtension.swift in Sources */,
 				08BAA0861F7A84A300FB4675 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,7 +283,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MZN7NAJZ7T;
+				DEVELOPMENT_TEAM = ECGY5X6YGW;
 				INFOPLIST_FILE = TableInTable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.comarch.TableInTable;
@@ -276,7 +296,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MZN7NAJZ7T;
+				DEVELOPMENT_TEAM = ECGY5X6YGW;
 				INFOPLIST_FILE = TableInTable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.comarch.TableInTable;
