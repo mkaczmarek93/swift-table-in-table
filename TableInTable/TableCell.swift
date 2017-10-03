@@ -13,7 +13,7 @@ class TableCell: UITableViewCell {
         let label = UILabel()
         label.numberOfLines =  0
         label.lineBreakMode = .byWordWrapping
-        label.text = "Some text"
+        label.text = " "
         label.textColor = UIColor.black
         label.sizeToFit()
         label.backgroundColor = UIColor.red
@@ -31,9 +31,14 @@ class TableCell: UITableViewCell {
     }
     
     func setupView(){
-//        print("TableCell setupView")
         addSubview(label)
         addConstraintsWithFormat("V:|-8-[v0]-8-|", views: label)
         addConstraintsWithFormat("H:|-5-[v0]-5-|", views: label)
+    }
+    
+    func setupData(number: Int) {
+        for _ in 0...number {
+            label.text?.append("Some text without context ")
+        }
     }
 }

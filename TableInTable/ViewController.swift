@@ -10,13 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let tableView = UITableView()
+    let tableView: OwnTableView = OwnTableView()
     let cellId = "firstTableCellId"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         tableView.reloadData()
+        view.backgroundColor = UIColor.gray
     }
     
     func setupView() {
@@ -26,13 +27,19 @@ class ViewController: UIViewController {
         tableView.register(NextTable.self, forCellReuseIdentifier: cellId)
         tableView.backgroundColor = UIColor.green
         tableView.separatorStyle = .singleLine
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 80
         
         view.addSubview(tableView)
-        view.backgroundColor = UIColor.gray
         view.addConstraintsWithFormat("V:|-60-[v0]-5-|", views: tableView)
         view.addConstraintsWithFormat("H:|-8-[v0]-8-|", views: tableView)
+        
+        tableView.beginUpdates()
+        tableView.reloadData()
+        tableView.endUpdates()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tableView.reloadData()
+    
     }
 }
 
@@ -41,25 +48,27 @@ extension ViewController: UITableViewDelegate {
 }
 
 extension ViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 10
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        print("ViewController numberOfRowsInSection")
-        return 2
+        return 1
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        print("ViewController heightForRowAt \(indexPath.row)")
         return UITableViewAutomaticDimension
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-//        print("ViewController estimatedHeightForRowAt \(indexPath.row)")
-        return 80
+        return UITableViewAutomaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        print("ViewController cell at index \(indexPath.row)")
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! NextTable
-        cell.layoutIfNeeded()
         return cell
     }
 }
