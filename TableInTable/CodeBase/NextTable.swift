@@ -13,6 +13,8 @@ class NextTable: UITableViewCell {
     var myTableView: OwnTableView = OwnTableView()
     let cellId = "nextTableCellId"
     
+    var number: Int!
+    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = UIColor.brown
@@ -38,8 +40,6 @@ class NextTable: UITableViewCell {
         addConstraint(NSLayoutConstraint(item: myTableView, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1.0, constant: 15))
         addConstraint(NSLayoutConstraint(item: myTableView, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1.0, constant: -15))
     }
-    
-    var number: Int!
 }
 
 extension NextTable: UITableViewDelegate {

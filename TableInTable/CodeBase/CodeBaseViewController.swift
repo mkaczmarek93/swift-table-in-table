@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CodeBaseViewController.swift
 //  TableInTable
 //
 //  Created by Michał Kaczmarek on 26.09.2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CodeBaseViewController: UIViewController {
     
     let tableView: OwnTableView = OwnTableView()
     let cellId = "firstTableCellId"
@@ -36,18 +36,18 @@ class ViewController: UIViewController {
         tableView.reloadData()
         tableView.endUpdates()
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         tableView.reloadData()
-    
     }
 }
 
-extension ViewController: UITableViewDelegate {
+extension CodeBaseViewController: UITableViewDelegate {
     
 }
 
-extension ViewController: UITableViewDataSource {
+extension CodeBaseViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 10
     }
